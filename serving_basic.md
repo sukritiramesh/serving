@@ -1,3 +1,6 @@
+---
+---
+
 # Serving a TensorFlow Model
 
 This tutorial shows you how to use TensorFlow Serving components to export a
@@ -9,7 +12,7 @@ Serving, and you want to create a more sophisticated server that handles
 inference requests asynchronously (without blocking client threads), and
 discovers and serves new versions of a TensorFlow model that is being
 dynamically updated, see the
-[TensorFlow Serving advanced tutorial](serving_advanced.md).
+[TensorFlow Serving advanced tutorial](serving_advanced).
 
 This tutorial uses the simple Softmax Regression model introduced in the
 TensorFlow tutorial for handwritten image (MNIST data) classification. If you
@@ -28,7 +31,7 @@ that trains and exports the model.
 that loads the exported model and runs a [gRPC](http://www.grpc.io) service to
 serve it.
 
-Before getting started, please complete the [prerequisites](setup.md#prerequisites).
+Before getting started, please complete the [prerequisites](setup#prerequisites).
 
 ## Train And Export TensorFlow Model
 

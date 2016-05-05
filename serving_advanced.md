@@ -1,3 +1,6 @@
+---
+---
+
 # Serving Dynamically Updated TensorFlow Model with Asynchronous Batching
 
 This tutorial shows you how to use TensorFlow Serving components to build a
@@ -9,7 +12,7 @@ threads and thus use less memory without compromising throughput. The code
 examples in this tutorial focus on the discovery, asynchronous batching, and
 serving logic. If you just want to use TensorFlow Serving to serve a single
 version model, and are fine with synchronous batching (relying on many client
-threads that block), see [TensorFlow Serving basic tutorial](serving_basic.md).
+threads that block), see [TensorFlow Serving basic tutorial](serving_basic).
 
 This tutorial uses the simple Softmax Regression model introduced in the
 TensorFlow tutorial for handwritten image (MNIST data) classification. If you
@@ -36,7 +39,7 @@ This tutorial steps through the following tasks:
   4. Serve request with TensorFlow Serving manager.
   5. Run and test the service.
 
-Before getting started, please complete the [prerequisites](setup.md#prerequisites).
+Before getting started, please complete the [prerequisites](setup#prerequisites).
 
 ## Train And Export TensorFlow Model
 
@@ -60,7 +63,7 @@ $>bazel-bin/tensorflow_serving/example/mnist_export --training_iteration=2000 --
 ~~~
 
 As you can see in `mnist_export.py`, the training and exporting is done the same
-way it is in the [TensorFlow Serving basic tutorial](serving_basic.md). For
+way it is in the [TensorFlow Serving basic tutorial](serving_basic). For
 demonstration purposes, you're intentionally dialing down the training
 iterations for the first run and exporting it as v1, while training it normally
 for the second run and exporting it as v2 to the same parent directory -- as we
@@ -130,7 +133,7 @@ monitors cloud storage instead of local storage, or you could build a version
 policy plugin that does version transition in a different way -- in fact, you
 could even build a custom model plugin that serves non-TensorFlow models. These
 topics are out of scope for this tutorial. However, you can refer to the
-[custom source](custom_source.md) and [custom servable](custom_servable.md)
+[custom source](custom_source) and [custom servable](custom_servable)
 tutorials for more information.
 
 ## Batching
@@ -233,7 +236,7 @@ To put all these into the context of this tutorial:
 
 `DoClassifyInBatch` then just requests `SessionBundle` from the manager and uses
 it to run inference. Most of the logic and flow is very similar to the logic and
-flow described in the [TensorFlow Serving basic tutorial](serving_basic.md),
+flow described in the [TensorFlow Serving basic tutorial](serving_basic),
 with just a few key changes:
 
   * The input tensor now has its first dimension set to variable batch size at
